@@ -120,6 +120,36 @@
     <a href="#propuestas" class="button-destacado">Elegí tu propuesta</a>
   </section>
 
+  <section id="propuestas" class="section-container">
+    <h2>Propuestas Principales</h2>
+    <div style="max-width: 800px; text-align: left;">
+      <div style="margin-bottom: 2rem;">
+        <h3>🎪 Kermés <span style="color: #28a745;">$</span></h3>
+        <p>Una propuesta llena de juegos clásicos, feria, y mucha diversión para todas las edades.</p>
+      </div>
+      <div style="margin-bottom: 2rem;">
+        <h3>🥁 Taller de Murga <span style="color: #28a745;">$</span></h3>
+        <p>Ritmo, disfraces y mucha energía en un taller donde todos pueden expresarse al ritmo de los tambores.</p>
+      </div>
+      <div style="margin-bottom: 2rem;">
+        <h3>🏃‍♂️ Propuesta Deportiva <span style="color: #28a745;">$</span></h3>
+        <p>Ideal para grupos grandes. Juegos físicos, postas, desafíos y trabajo en equipo.</p>
+      </div>
+      <div style="margin-bottom: 2rem;">
+        <h3>💦 Propuesta Acuática <span style="color: #28a745;">$</span></h3>
+        <p>Perfecta para el verano. Juegos con agua, inflables húmedos y mucha risa.</p>
+      </div>
+      <div style="margin-bottom: 2rem;">
+        <h3>🤝 Juegos Cooperativos <span style="color: #28a745;">$</span></h3>
+        <p>Actividades donde el foco está en el trabajo grupal, la empatía y la diversión sin competencia.</p>
+      </div>
+      <div style="margin-bottom: 2rem;">
+        <h3>🎨 Propuesta Artística <span style="color: #28a745;">$</span></h3>
+        <p>Un espacio creativo con pintura, manualidades y creación libre. Ideal para dejar volar la imaginación.</p>
+      </div>
+    </div>
+  </section>
+
   <a class="floating-whatsapp" href="https://wa.me/542645123339" target="_blank">WhatsApp</a>
 
   <script>
