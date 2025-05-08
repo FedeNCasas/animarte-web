@@ -18,20 +18,25 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
+    .logo {
+      height: 60px;
     }
     nav {
       display: flex;
       gap: 1.5rem;
+      align-items: center;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
+    }
+    nav a img {
+      height: 24px;
+      vertical-align: middle;
     }
     nav a:hover {
       text-decoration: underline;
@@ -44,56 +49,32 @@
       align-items: center;
       text-align: center;
       padding: 4rem 2rem;
+      transition: all 0.3s ease-in-out;
     }
     .section-container:nth-child(even) {
       background-color: #fff8f0;
     }
     h2 {
       color: #ff7f00;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 1s ease-out;
     }
     .button-destacado {
-      background: linear-gradient(45deg, #ff7f00, #ffcd00);
+      background: linear-gradient(90deg, #ff7f00, #ffcd00);
       border: none;
       color: white;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
+      padding: 1.2rem 2.5rem;
+      font-size: 1.4rem;
       font-weight: bold;
-      border-radius: 10px;
+      border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .button-destacado:hover {
-      transform: scale(1.05);
-    }
-    .proposal-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .proposal-item, .adicional-item {
-      background-color: #fff0e0;
-      padding: 1rem;
-      border: 2px solid #ff7f00;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .proposal-item:hover, .adicional-item:hover {
-      background-color: #ffe2c2;
-    }
-    .proposal-image, .adicional-image {
-      display: none;
-      margin-top: 1rem;
-    }
-    .proposal-item.active .proposal-image,
-    .adicional-item.active .adicional-image {
-      display: block;
-      width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
+      transform: scale(1.08);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
     }
     .floating-whatsapp {
       position: fixed;
@@ -106,94 +87,37 @@
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 1000;
     }
-    .btn-instagram {
-      background-color: white;
-      color: #ff7f00;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      font-weight: bold;
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .inicio-bg {
+      background: linear-gradient(135deg, #ffe8c2, #fff0dc);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>AnimArte San Juan</h1>
+    <img src="logo.png" alt="Logo AnimArte" class="logo">
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#propuestas">Propuestas</a>
       <a href="#adicionales">Adicionales</a>
       <a href="#quienes">¿Quiénes somos?</a>
       <a href="#contacto">Contacto</a>
-      <a class="btn-instagram" href="https://www.instagram.com/animarte.sanjuan/" target="_blank">Instagram</a>
+      <a href="https://www.instagram.com/animarte.sanjuan/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/animarte.sanjuan" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
     </nav>
   </header>
 
-  <section id="inicio" class="section-container">
-    <h2>Bienvenid@ a AnimArte</h2>
+  <section id="inicio" class="section-container inicio-bg">
+    <h2>¡Bienvenid@ al mundo de la diversión!</h2>
+    <p style="max-width: 600px; font-size: 1.2rem; color: #444; margin-bottom: 2rem;">
+      En AnimArte hacemos que cada evento sea inolvidable. Con propuestas creativas y animación profesional, transformamos tu celebración en pura magia 🎉
+    </p>
     <a href="#propuestas" class="button-destacado">Elegí tu propuesta</a>
-  </section>
-
-  <section id="propuestas" class="section-container">
-    <h2>Propuestas Principales</h2>
-    <div class="proposal-list">
-      <div class="proposal-item" onclick="toggleImage(this)">🎪 <strong>Kermés</strong> – Juegos tradicionales llenos de color
-        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Ni%C3%B1os+jugando+Kerm%C3%A9s" alt="Kermés">
-      </div>
-      <div class="proposal-item" onclick="toggleImage(this)">🥁 <strong>Taller de Murga</strong> – Ritmo, expresión y disfraces
-        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Murga+con+ni%C3%B1os" alt="Murga">
-      </div>
-      <div class="proposal-item" onclick="toggleImage(this)">🏃‍♂️ <strong>Propuesta Deportiva</strong> – Actividad física y desafíos
-        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Juegos+deportivos+infantiles" alt="Deportiva">
-      </div>
-      <div class="proposal-item" onclick="toggleImage(this)">💦 <strong>Propuesta Acuática</strong> – Diversión a puro agua
-        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Ni%C3%B1os+con+agua" alt="Acuática">
-      </div>
-      <div class="proposal-item" onclick="toggleImage(this)">🤝 <strong>Juegos Cooperativos</strong> – Trabajar en equipo jugando
-        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Cooperaci%C3%B3n+entre+ni%C3%B1os" alt="Cooperativos">
-      </div>
-      <div class="proposal-item" onclick="toggleImage(this)">🎨 <strong>Propuesta Artística</strong> – Pintura, creatividad y arte
-        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Arte+infantil" alt="Artística">
-      </div>
-    </div>
-  </section>
-
-  <section id="adicionales" class="section-container">
-    <h2>Adicionales</h2>
-    <div class="proposal-list">
-      <div class="adicional-item" onclick="toggleImage(this)">🎨 Maquillaje
-        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Maquillaje+infantil" alt="Maquillaje">
-      </div>
-      <div class="adicional-item" onclick="toggleImage(this)">🫧 Fiesta de la espuma
-        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Espuma+diversi%C3%B3n" alt="Espuma">
-      </div>
-      <div class="adicional-item" onclick="toggleImage(this)">🎈 Globología
-        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Globos+animaci%C3%B3n" alt="Globologia">
-      </div>
-      <div class="adicional-item" onclick="toggleImage(this)">🛝 Inflables y deslizadores
-        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Inflables+en+acci%C3%B3n" alt="Inflables">
-      </div>
-      <div class="adicional-item" onclick="toggleImage(this)">🧪 Slime
-        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Slime+divertido" alt="Slime">
-      </div>
-      <div class="adicional-item" onclick="toggleImage(this)">🫧 Burbujas gigantes
-        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Burbujas+gigantes" alt="Burbujas">
-      </div>
-    </div>
-  </section>
-
-  <section id="quienes" class="section-container">
-    <div class="content-box">
-      <h2>¿Quiénes somos?</h2>
-      <p>Somos una empresa familiar con más de 10 años de experiencia en el mundo de la recreación. Amamos lo que hacemos y eso se nota en cada sonrisa que provocamos.</p>
-    </div>
-  </section>
-
-  <section id="contacto" class="section-container">
-    <div class="content-box">
-      <h2>Contacto</h2>
-      <p>Podés pedir tu presupuesto o agendar directamente tu evento desde <a href="https://wa.me/542645123339" target="_blank">WhatsApp</a> y te ayudamos a armar una propuesta a medida para vos ✨</p>
-    </div>
   </section>
 
   <a class="floating-whatsapp" href="https://wa.me/542645123339" target="_blank">WhatsApp</a>
