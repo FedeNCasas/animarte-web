@@ -53,8 +53,31 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    .content-box {
-      max-width: 800px;
+    .proposal-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .proposal-item {
+      background-color: #fff0e0;
+      padding: 1rem;
+      border: 2px solid #ff7f00;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .proposal-item:hover {
+      background-color: #ffe2c2;
+    }
+    .proposal-image {
+      display: none;
+      margin-top: 1rem;
+    }
+    .proposal-item.active .proposal-image {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
     }
     .floating-whatsapp {
       position: fixed;
@@ -90,14 +113,32 @@
   </header>
 
   <section id="propuestas" class="section-container">
-    <div class="content-box">
-      <h2>Propuestas Principales</h2>
-      <p>🎪 Kermés – Juegos tradicionales llenos de color<br>
-      🥁 Taller de Murga – Ritmo, expresión y disfraces<br>
-      🏃‍♂️ Propuesta Deportiva – Actividad física y desafíos<br>
-      💦 Propuesta Acuática – Diversión a puro agua<br>
-      🤝 Juegos Cooperativos – Trabajar en equipo jugando<br>
-      🎨 Propuesta Artística – Pintura, creatividad y arte</p>
+    <h2>Propuestas Principales</h2>
+    <div class="proposal-list">
+      <div class="proposal-item" onclick="toggleImage(this)">
+        🎪 <strong>Kermés</strong> – Juegos tradicionales llenos de color
+        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Ni%C3%B1os+jugando+Kerm%C3%A9s" alt="Kermés">
+      </div>
+      <div class="proposal-item" onclick="toggleImage(this)">
+        🥁 <strong>Taller de Murga</strong> – Ritmo, expresión y disfraces
+        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Murga+con+ni%C3%B1os" alt="Murga">
+      </div>
+      <div class="proposal-item" onclick="toggleImage(this)">
+        🏃‍♂️ <strong>Propuesta Deportiva</strong> – Actividad física y desafíos
+        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Juegos+deportivos+infantiles" alt="Deportiva">
+      </div>
+      <div class="proposal-item" onclick="toggleImage(this)">
+        💦 <strong>Propuesta Acuática</strong> – Diversión a puro agua
+        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Ni%C3%B1os+con+agua" alt="Acuática">
+      </div>
+      <div class="proposal-item" onclick="toggleImage(this)">
+        🤝 <strong>Juegos Cooperativos</strong> – Trabajar en equipo jugando
+        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Cooperaci%C3%B3n+entre+ni%C3%B1os" alt="Cooperativos">
+      </div>
+      <div class="proposal-item" onclick="toggleImage(this)">
+        🎨 <strong>Propuesta Artística</strong> – Pintura, creatividad y arte
+        <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Arte+infantil" alt="Artística">
+      </div>
     </div>
   </section>
 
@@ -128,5 +169,11 @@
   </section>
 
   <a class="floating-whatsapp" href="https://wa.me/542645123339" target="_blank">WhatsApp</a>
+
+  <script>
+    function toggleImage(element) {
+      element.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
