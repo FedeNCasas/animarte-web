@@ -53,12 +53,27 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+    .button-destacado {
+      background: linear-gradient(45deg, #ff7f00, #ffcd00);
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+    .button-destacado:hover {
+      transform: scale(1.05);
+    }
     .proposal-list {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
-    .proposal-item {
+    .proposal-item, .adicional-item {
       background-color: #fff0e0;
       padding: 1rem;
       border: 2px solid #ff7f00;
@@ -66,14 +81,15 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    .proposal-item:hover {
+    .proposal-item:hover, .adicional-item:hover {
       background-color: #ffe2c2;
     }
-    .proposal-image {
+    .proposal-image, .adicional-image {
       display: none;
       margin-top: 1rem;
     }
-    .proposal-item.active .proposal-image {
+    .proposal-item.active .proposal-image,
+    .adicional-item.active .adicional-image {
       display: block;
       width: 100%;
       max-width: 500px;
@@ -104,6 +120,7 @@
   <header>
     <h1>AnimArte San Juan</h1>
     <nav>
+      <a href="#inicio">Inicio</a>
       <a href="#propuestas">Propuestas</a>
       <a href="#adicionales">Adicionales</a>
       <a href="#quienes">¿Quiénes somos?</a>
@@ -112,68 +129,36 @@
     </nav>
   </header>
 
+  <section id="inicio" class="section-container">
+    <h2>Bienvenid@ a AnimArte</h2>
+    <a href="#propuestas" class="button-destacado">Elegí tu propuesta</a>
+  </section>
+
   <section id="propuestas" class="section-container">
     <h2>Propuestas Principales</h2>
     <div class="proposal-list">
-      <div class="proposal-item" onclick="toggleImage(this)">
-        🎪 <strong>Kermés</strong> – Juegos tradicionales llenos de color
+      <div class="proposal-item" onclick="toggleImage(this)">🎪 <strong>Kermés</strong> – Juegos tradicionales llenos de color
         <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Ni%C3%B1os+jugando+Kerm%C3%A9s" alt="Kermés">
       </div>
-      <div class="proposal-item" onclick="toggleImage(this)">
-        🥁 <strong>Taller de Murga</strong> – Ritmo, expresión y disfraces
+      <div class="proposal-item" onclick="toggleImage(this)">🥁 <strong>Taller de Murga</strong> – Ritmo, expresión y disfraces
         <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Murga+con+ni%C3%B1os" alt="Murga">
       </div>
-      <div class="proposal-item" onclick="toggleImage(this)">
-        🏃‍♂️ <strong>Propuesta Deportiva</strong> – Actividad física y desafíos
+      <div class="proposal-item" onclick="toggleImage(this)">🏃‍♂️ <strong>Propuesta Deportiva</strong> – Actividad física y desafíos
         <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Juegos+deportivos+infantiles" alt="Deportiva">
       </div>
-      <div class="proposal-item" onclick="toggleImage(this)">
-        💦 <strong>Propuesta Acuática</strong> – Diversión a puro agua
+      <div class="proposal-item" onclick="toggleImage(this)">💦 <strong>Propuesta Acuática</strong> – Diversión a puro agua
         <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Ni%C3%B1os+con+agua" alt="Acuática">
       </div>
-      <div class="proposal-item" onclick="toggleImage(this)">
-        🤝 <strong>Juegos Cooperativos</strong> – Trabajar en equipo jugando
+      <div class="proposal-item" onclick="toggleImage(this)">🤝 <strong>Juegos Cooperativos</strong> – Trabajar en equipo jugando
         <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Cooperaci%C3%B3n+entre+ni%C3%B1os" alt="Cooperativos">
       </div>
-      <div class="proposal-item" onclick="toggleImage(this)">
-        🎨 <strong>Propuesta Artística</strong> – Pintura, creatividad y arte
+      <div class="proposal-item" onclick="toggleImage(this)">🎨 <strong>Propuesta Artística</strong> – Pintura, creatividad y arte
         <img class="proposal-image" src="https://via.placeholder.com/500x300.png?text=Arte+infantil" alt="Artística">
       </div>
     </div>
   </section>
 
   <section id="adicionales" class="section-container">
-    <div class="content-box">
-      <h2>Adicionales</h2>
-      <p>🎨 Maquillaje<br>
-      🫧 Fiesta de la espuma<br>
-      🎈 Globología<br>
-      🛝 Inflables y deslizadores<br>
-      🧪 Slime<br>
-      🫧 Burbujas gigantes</p>
-    </div>
-  </section>
-
-  <section id="quienes" class="section-container">
-    <div class="content-box">
-      <h2>¿Quiénes somos?</h2>
-      <p>Somos una empresa familiar con más de 10 años de experiencia en el mundo de la recreación. Amamos lo que hacemos y eso se nota en cada sonrisa que provocamos.</p>
-    </div>
-  </section>
-
-  <section id="contacto" class="section-container">
-    <div class="content-box">
-      <h2>Contacto</h2>
-      <p>Podés pedir tu presupuesto o agendar directamente tu evento desde <a href="https://wa.me/542645123339" target="_blank">WhatsApp</a> y te ayudamos a armar una propuesta a medida para vos ✨</p>
-    </div>
-  </section>
-
-  <a class="floating-whatsapp" href="https://wa.me/542645123339" target="_blank">WhatsApp</a>
-
-  <script>
-    function toggleImage(element) {
-      element.classList.toggle('active');
-    }
-  </script>
-</body>
-</html>
+    <h2>Adicionales</h2>
+    <div class="proposal-list">
+      <div class="adicional-item" onclic
