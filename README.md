@@ -161,4 +161,47 @@
   <section id="adicionales" class="section-container">
     <h2>Adicionales</h2>
     <div class="proposal-list">
-      <div class="adicional-item" onclic
+      <div class="adicional-item" onclick="toggleImage(this)">🎨 Maquillaje
+        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Maquillaje+infantil" alt="Maquillaje">
+      </div>
+      <div class="adicional-item" onclick="toggleImage(this)">🫧 Fiesta de la espuma
+        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Espuma+diversi%C3%B3n" alt="Espuma">
+      </div>
+      <div class="adicional-item" onclick="toggleImage(this)">🎈 Globología
+        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Globos+animaci%C3%B3n" alt="Globologia">
+      </div>
+      <div class="adicional-item" onclick="toggleImage(this)">🛝 Inflables y deslizadores
+        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Inflables+en+acci%C3%B3n" alt="Inflables">
+      </div>
+      <div class="adicional-item" onclick="toggleImage(this)">🧪 Slime
+        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Slime+divertido" alt="Slime">
+      </div>
+      <div class="adicional-item" onclick="toggleImage(this)">🫧 Burbujas gigantes
+        <img class="adicional-image" src="https://via.placeholder.com/500x300.png?text=Burbujas+gigantes" alt="Burbujas">
+      </div>
+    </div>
+  </section>
+
+  <section id="quienes" class="section-container">
+    <div class="content-box">
+      <h2>¿Quiénes somos?</h2>
+      <p>Somos una empresa familiar con más de 10 años de experiencia en el mundo de la recreación. Amamos lo que hacemos y eso se nota en cada sonrisa que provocamos.</p>
+    </div>
+  </section>
+
+  <section id="contacto" class="section-container">
+    <div class="content-box">
+      <h2>Contacto</h2>
+      <p>Podés pedir tu presupuesto o agendar directamente tu evento desde <a href="https://wa.me/542645123339" target="_blank">WhatsApp</a> y te ayudamos a armar una propuesta a medida para vos ✨</p>
+    </div>
+  </section>
+
+  <a class="floating-whatsapp" href="https://wa.me/542645123339" target="_blank">WhatsApp</a>
+
+  <script>
+    function toggleImage(element) {
+      element.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
