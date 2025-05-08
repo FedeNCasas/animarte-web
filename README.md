@@ -150,6 +150,42 @@
     </div>
   </section>
 
+  <section id="adicionales" class="section-container">
+    <h2>Adicionales</h2>
+    <div style="max-width: 800px; text-align: left;">
+      <div onclick="toggleImage(this)" style="margin-bottom: 2rem; cursor: pointer;">
+        <h3>🎨 Maquillaje <span style='color: #28a745;'>$</span></h3>
+        <p>Colores, purpurina y mucha creatividad para que cada niñ@ se convierta en lo que imagine.</p>
+        <img class="adicional-image" style="display:none; width:100%; max-width:500px; border-radius:10px;" src="https://via.placeholder.com/500x300.png?text=Maquillaje+Infantil" alt="Maquillaje">
+      </div>
+      <div onclick="toggleImage(this)" style="margin-bottom: 2rem; cursor: pointer;">
+        <h3>🫧 Fiesta de la Espuma <span style='color: #28a745;'>$</span></h3>
+        <p>Una explosión de burbujas para saltar, reír y refrescarse con alegría.</p>
+        <img class="adicional-image" style="display:none; width:100%; max-width:500px; border-radius:10px;" src="https://via.placeholder.com/500x300.png?text=Fiesta+de+la+Espuma" alt="Espuma">
+      </div>
+      <div onclick="toggleImage(this)" style="margin-bottom: 2rem; cursor: pointer;">
+        <h3>🎈 Globología <span style='color: #28a745;'>$</span></h3>
+        <p>Figuras y animales hechos con globos para llevar magia a cada rincón del evento.</p>
+        <img class="adicional-image" style="display:none; width:100%; max-width:500px; border-radius:10px;" src="https://via.placeholder.com/500x300.png?text=Globolog%C3%ADa" alt="Globología">
+      </div>
+      <div onclick="toggleImage(this)" style="margin-bottom: 2rem; cursor: pointer;">
+        <h3>🛝 Inflables y Deslizadores <span style='color: #28a745;'>$</span></h3>
+        <p>Juegos gigantes para saltar, correr y deslizarse. ¡Diversión garantizada!</p>
+        <img class="adicional-image" style="display:none; width:100%; max-width:500px; border-radius:10px;" src="https://via.placeholder.com/500x300.png?text=Inflables+y+Deslizadores" alt="Inflables">
+      </div>
+      <div onclick="toggleImage(this)" style="margin-bottom: 2rem; cursor: pointer;">
+        <h3>🧪 Slime <span style='color: #28a745;'>$</span></h3>
+        <p>Taller sensorial donde crean, juegan y se llevan su slime a casa.</p>
+        <img class="adicional-image" style="display:none; width:100%; max-width:500px; border-radius:10px;" src="https://via.placeholder.com/500x300.png?text=Taller+de+Slime" alt="Slime">
+      </div>
+      <div onclick="toggleImage(this)" style="margin-bottom: 2rem; cursor: pointer;">
+        <h3>🫧 Burbujas Gigantes <span style='color: #28a745;'>$</span></h3>
+        <p>¡Un espectáculo visual! Burbujas enormes para mirar, tocar y explotar.</p>
+        <img class="adicional-image" style="display:none; width:100%; max-width:500px; border-radius:10px;" src="https://via.placeholder.com/500x300.png?text=Burbujas+Gigantes" alt="Burbujas">
+      </div>
+    </div>
+  </section>
+
   <a class="floating-whatsapp" href="https://wa.me/542645123339" target="_blank">WhatsApp</a>
 
   <script>
