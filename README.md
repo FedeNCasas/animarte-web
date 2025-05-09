@@ -8,108 +8,102 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       background-image: url('/mnt/data/475963764_1631740734130775_3440810953045748882_n.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-    nav a:hover {
-      text-decoration: underline;
+    nav a {
+      transition: all 0.3s ease;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #fb923c;
+      font-weight: bold;
+    }
+    .galeria img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 4px solid #fb923c;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    #loader {
+      position: fixed;
+      z-index: 9999;
+      background: white;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loader-logo {
+      animation: bounce 1.2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
     }
   </style>
 </head>
 <body class="text-gray-800 bg-white bg-opacity-80">
 
+  <!-- Loader -->
+  <div id="loader">
+    <img src="/mnt/data/Diseño%20sin%20título.pdf" alt="Cargando AnimArte..." class="h-24 loader-logo">
+  </div>
+
   <!-- Header -->
-  <header class="fixed w-full top-0 bg-white/90 shadow z-50 flex justify-between items-center px-4 py-3">
-    <div class="flex items-center gap-2">
+  <header class="fixed w-full top-0 bg-white/90 shadow z-50 flex justify-between items-center px-6 py-4">
+    <div class="flex items-center gap-3">
       <img src="/mnt/data/Diseño%20sin%20título.pdf" alt="Logo AnimArte" class="h-10">
       <span class="text-xl font-bold text-orange-500">AnimArte</span>
     </div>
-    <nav class="flex gap-4 text-sm text-orange-600 font-medium">
-      <a href="#propuestas">Propuestas</a>
-      <a href="#adicionales">Adicionales</a>
-      <a href="#quienes">¿Quiénes somos?</a>
+    <nav class="flex gap-6 text-sm text-gray-800 font-medium">
+      <a href="#" class="active">Home</a>
+      <a href="#propuestas">Servicios</a>
+      <a href="#galeria">Galería</a>
       <a href="#contacto">Contacto</a>
-      <a href="#formulario">Formulario</a>
+      <a href="#formulario">Reservas</a>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section class="pt-28 text-center p-6 bg-orange-100 bg-opacity-80" data-aos="fade-down">
-    <h2 class="text-3xl font-bold text-orange-600">¡Bienvenid@ a AnimArte San Juan!</h2>
-    <p class="mt-2">Recreación que contagia alegría 🎉</p>
-    <a href="#propuestas" class="mt-4 inline-block bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition">Elegí tu propuesta</a>
+  <section class="pt-28 text-center p-6 bg-gradient-to-br from-orange-200 via-white to-orange-100 bg-opacity-90" data-aos="fade-down">
+    <h2 class="text-4xl font-extrabold text-orange-600 drop-shadow-sm">¡Bienvenid@ a AnimArte San Juan!</h2>
+    <p class="mt-4 text-lg">Diversión, color y alegría en cada evento 🎉</p>
+    <a href="#propuestas" class="mt-6 inline-block bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition text-lg font-semibold shadow">Elegí tu propuesta</a>
   </section>
 
-  <!-- Propuestas -->
-  <section id="propuestas" class="p-6" data-aos="fade-up">
-    <h3 class="text-2xl font-semibold mb-4 text-orange-600">Propuestas</h3>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="border rounded-xl p-4 shadow hover:shadow-lg transition bg-white/90">
-        <img src="/mnt/data/475872232_2200517647008935_6123000362082530224_n.jpg" alt="Kermés" class="rounded mb-2">
-        <h4 class="text-xl font-bold">🎪 Kermés <span class="text-green-600">$</span></h4>
-        <p>Juegos tradicionales en coloridas carpas que llenan de alegría cualquier espacio.</p>
-      </div>
-      <div class="border rounded-xl p-4 shadow hover:shadow-lg transition bg-white/90">
-        <img src="/mnt/data/8d0e34f1-ea3c-466f-acb2-10aed1360d4f.png" alt="Juegos Cooperativos" class="rounded mb-2">
-        <h4 class="text-xl font-bold">🌈 Juegos Cooperativos <span class="text-green-600">$</span></h4>
-        <p>Dinámicas con paracaídas y juegos grupales que promueven la alegría y el trabajo en equipo.</p>
-      </div>
+  <!-- Galería -->
+  <section id="galeria" class="p-8 bg-white/90" data-aos="fade-in">
+    <h3 class="text-3xl font-bold mb-6 text-center text-orange-600">Galería AnimArte 📸</h3>
+    <div class="grid md:grid-cols-3 gap-6 galeria">
+      <img src="/mnt/data/297741195_6017047334977996_5275350838111807804_n.jpg" class="rounded shadow">
+      <img src="/mnt/data/491441543_18074288689849714_2999441093933010812_n.jpg" class="rounded shadow">
+      <img src="/mnt/data/475963764_1631740734130775_3440810953045748882_n.jpg" class="rounded shadow">
+      <img src="/mnt/data/475872232_2200517647008935_6123000362082530224_n.jpg" class="rounded shadow">
+      <img src="/mnt/data/8d0e34f1-ea3c-466f-acb2-10aed1360d4f.png" class="rounded shadow">
     </div>
-  </section>
-
-  <!-- Adicionales -->
-  <section id="adicionales" class="p-6 bg-orange-50 bg-opacity-80" data-aos="fade-up">
-    <h3 class="text-2xl font-semibold mb-4 text-orange-600">Adicionales</h3>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="border rounded-xl p-4 shadow hover:shadow-lg transition bg-white/90">
-        <img src="/mnt/data/491441543_18074288689849714_2999441093933010812_n.jpg" alt="Espuma" class="rounded mb-2">
-        <h4 class="text-xl font-bold">🎨 Maquillaje artístico <span class="text-green-600">$</span></h4>
-        <p>Transformamos caritas en personajes mágicos y coloridos.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quiénes somos -->
-  <section id="quienes" class="p-6 text-center" data-aos="fade-in">
-    <h3 class="text-2xl font-semibold text-orange-600 mb-2">¿Quiénes somos?</h3>
-    <p class="max-w-2xl mx-auto bg-white/90 p-4 rounded-xl">Somos una familia que ama jugar, crear y compartir. Nuestro propósito es regalar sonrisas, momentos únicos y experiencias llenas de magia en cada evento. ¡Lo hacemos con el corazón! ❤️</p>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="p-6 bg-orange-100 bg-opacity-90" data-aos="fade-in">
-    <h3 class="text-2xl font-semibold text-orange-600 mb-2">Contacto</h3>
-    <p class="bg-white/90 p-4 rounded-xl">
-      📍 San Juan, Argentina<br>
-      📱 WhatsApp: <a href="https://wa.me/5492645411194" class="text-blue-600">+54 9 264 5411194</a><br>
-      📧 Mail: <a href="mailto:animarte@gmail.com" class="text-blue-600">animarte@gmail.com</a><br>
-      📸 Redes:
-      <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTg5MjY5NTA2MjE1MTY4" target="_blank" class="text-blue-600">Instagram</a> /
-      <a href="https://www.facebook.com/animarte.sanjuan" target="_blank" class="text-blue-600">Facebook</a> /
-      <a href="https://maps.app.goo.gl/6ARj9PBmQ12aJtmLA" target="_blank" class="text-blue-600">Google Maps</a>
-    </p>
-  </section>
-
-  <!-- Formulario -->
-  <section id="formulario" class="p-6" data-aos="fade-up">
-    <h3 class="text-2xl font-semibold text-orange-600 mb-2">Consultanos</h3>
-    <form class="bg-white/90 p-4 rounded-xl grid gap-4 max-w-xl mx-auto">
-      <input type="text" placeholder="Nombre y Apellido" class="border p-2 rounded">
-      <input type="email" placeholder="Correo electrónico" class="border p-2 rounded">
-      <textarea placeholder="Consulta o mensaje..." rows="4" class="border p-2 rounded"></textarea>
-      <button type="submit" class="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600">Enviar</button>
-    </form>
   </section>
 
   <!-- Botón WhatsApp flotante -->
-  <a href="https://wa.me/5492645411194" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50">
+  <a href="https://wa.me/5492645123339?text=Hola,%20mas%20informacion%20porfavor,%20nos%20interesa%20contratar%20el%20servicio%20%F0%9F%98%80%F0%9F%98%80" class="fixed bottom-4 right-4 bg-gradient-to-br from-pink-500 via-yellow-400 to-green-400 hover:brightness-110 text-white p-4 rounded-full shadow-lg z-50">
     📲
   </a>
 
   <script>
     AOS.init();
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      if (loader) loader.style.display = 'none';
+    });
   </script>
 </body>
 </html>
