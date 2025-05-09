@@ -1,62 +1,73 @@
-<!-- SECCIÓN PROPUESTAS -->
-<section id="propuestas" class="p-8 bg-orange-50" data-aos="fade-up">
-  <h3 class="text-3xl font-extrabold mb-6 text-center text-orange-600">Nuestras Propuestas 🎉</h3>
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-white rounded-xl shadow p-6 border-l-8 border-orange-400">
-      <h4 class="text-2xl font-bold text-orange-600 mb-2">🎪 Kermés - $120.000</h4>
-      
-      <div class="mt-4">
-        <a href="adicionales.html" target="_blank" class="inline-block bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold px-5 py-2 rounded-full shadow hover:scale-105 transition">Reservar esta propuesta</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleccionar Adicionales</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-yellow-50 via-pink-50 to-orange-100 min-h-screen p-8">
+  <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-xl p-6">
+    <h1 class="text-3xl font-bold text-center text-orange-500 mb-4">🎁 Elegí tus adicionales</h1>
+    <form id="formAdicionales" class="space-y-4">
+      <div class="space-y-2">
+        <label class="flex items-center gap-2">
+          <input type="checkbox" name="adicionales" value="Slime">
+          🎈 Slime - $10.000
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" name="adicionales" value="Maquillaje artístico">
+          🎨 Maquillaje artístico - $10.000
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" name="adicionales" value="Globología">
+          🎈 Globología - $10.000
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" name="adicionales" value="Inflables">
+          🏰 Inflables - $20.000
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" name="adicionales" value="Deslizadores inflables">
+          🛷 Deslizadores inflables - $20.000
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" name="adicionales" value="Burbujas gigantes">
+          🔵 Burbujas gigantes - $15.000
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" name="adicionales" value="Fiesta de la espuma">
+          🎊 Fiesta de la espuma - $25.000
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" name="adicionales" value="Sin adicionales" id="sinAdicionales">
+          ❌ Sin adicionales
+        </label>
       </div>
-    </div>
-    <div class="bg-white rounded-xl shadow p-6 border-l-8 border-pink-500">
-      <h4 class="text-2xl font-bold text-pink-600 mb-2">🥁 Taller de Murga - $120.000</h4>
-      
-      <div class="mt-4">
-        <a href="adicionales.html" target="_blank" class="inline-block bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold px-5 py-2 rounded-full shadow hover:scale-105 transition">Reservar esta propuesta</a>
+      <div class="text-center mt-6">
+        <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow font-semibold transition">Continuar por WhatsApp</button>
       </div>
-    </div>
-    <div class="bg-white rounded-xl shadow p-6 border-l-8 border-blue-500">
-      <h4 class="text-2xl font-bold text-blue-600 mb-2">⚽ Propuesta Deportiva - $120.000</h4>
-      
-      <div class="mt-4">
-        <a href="adicionales.html" target="_blank" class="inline-block bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold px-5 py-2 rounded-full shadow hover:scale-105 transition">Reservar esta propuesta</a>
-      </div>
-    </div>
-    <div class="bg-white rounded-xl shadow p-6 border-l-8 border-cyan-500">
-      <h4 class="text-2xl font-bold text-cyan-600 mb-2">💦 Propuesta Acuática - $120.000</h4>
-      
-      <div class="mt-4">
-        <a href="adicionales.html" target="_blank" class="inline-block bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold px-5 py-2 rounded-full shadow hover:scale-105 transition">Reservar esta propuesta</a>
-      </div>
-    </div>
-    <div class="bg-white rounded-xl shadow p-6 border-l-8 border-green-600">
-      <h4 class="text-2xl font-bold text-green-700 mb-2">🤝 Juegos Cooperativos - $120.000</h4>
-      
-      <div class="mt-4">
-        <a href="adicionales.html" target="_blank" class="inline-block bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold px-5 py-2 rounded-full shadow hover:scale-105 transition">Reservar esta propuesta</a>
-      </div>
-    </div>
-    <div class="bg-white rounded-xl shadow p-6 border-l-8 border-purple-500">
-      <h4 class="text-2xl font-bold text-purple-700 mb-2">🎨 Propuesta Artística - $120.000</h4>
-      
-      <div class="mt-4">
-        <a href="adicionales.html" target="_blank" class="inline-block bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold px-5 py-2 rounded-full shadow hover:scale-105 transition">Reservar esta propuesta</a>
-      </div>
-    </div>
+    </form>
   </div>
-</section>
 
-<!-- ADICIONALES -->
-<section id="adicionales" class="p-8 bg-orange-100" data-aos="fade-up">
-  <h3 class="text-3xl font-extrabold mb-6 text-center text-orange-700">Adicionales 🍭</h3>
-  <ul class="grid md:grid-cols-2 gap-4 text-gray-800">
-    <li class="bg-white p-4 rounded-xl shadow border-l-4 border-amber-400">🎈 Slime - $10.000</li>
-    <li class="bg-white p-4 rounded-xl shadow border-l-4 border-pink-400">🎨 Maquillaje artístico - $10.000</li>
-    <li class="bg-white p-4 rounded-xl shadow border-l-4 border-blue-400">🎈 Globología - $10.000</li>
-    <li class="bg-white p-4 rounded-xl shadow border-l-4 border-green-400">🏰 Inflables - $20.000</li>
-    <li class="bg-white p-4 rounded-xl shadow border-l-4 border-sky-400">🛷 Deslizadores inflables - $20.000</li>
-    <li class="bg-white p-4 rounded-xl shadow border-l-4 border-purple-400">🔵 Burbujas gigantes - $15.000</li>
-    <li class="bg-white p-4 rounded-xl shadow border-l-4 border-red-400">🎊 Fiesta de la espuma - $25.000</li>
-  </ul>
-</section>
+  <script>
+    const form = document.getElementById('formAdicionales');
+    const sinAdicionales = document.getElementById('sinAdicionales');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const seleccionados = [];
+      form.querySelectorAll('input[type=checkbox]:checked').forEach(input => {
+        if (input.value !== 'Sin adicionales') seleccionados.push(input.value);
+      });
+
+      const mensaje = seleccionados.length > 0 ?
+        `Hola, quiero reservar una propuesta con los siguientes adicionales: ${seleccionados.join(', ')}` :
+        `Hola, quiero reservar una propuesta sin adicionales.`;
+
+      const url = `https://wa.me/5492645123339?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
